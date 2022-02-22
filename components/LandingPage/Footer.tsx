@@ -1,7 +1,7 @@
 import React from 'react';
-import { Footers } from '../../lib/types/footerType';
+import Footers from '../../lib/types/footerType';
 
-export const Footer: React.FC<Footers> = (footer) => {
+export const Footer: React.FC<Footers> = ({ company, legal }) => {
   const currentYear = new Date().getFullYear();
   return (
     <>
@@ -30,7 +30,7 @@ export const Footer: React.FC<Footers> = (footer) => {
                     Company
                   </h3>
                   <ul role='list' className='mt-4 space-y-4'>
-                    {footer.company.map((item) => (
+                    {company.map((item) => (
                       <li key={item.name}>
                         <a
                           href={item.href}
@@ -47,7 +47,7 @@ export const Footer: React.FC<Footers> = (footer) => {
                     Legal
                   </h3>
                   <ul role='list' className='mt-4 space-y-4'>
-                    {footer.legal.map((item) => (
+                    {legal.map((item) => (
                       <li key={item.name}>
                         <a
                           href={item.href}

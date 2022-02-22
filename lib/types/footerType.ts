@@ -1,4 +1,4 @@
-export interface Footers {
+export default interface Footers {
   company: Company[];
   legal: Legal[];
 }

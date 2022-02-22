@@ -27,7 +27,10 @@ const Home: NextPage = () => {
         <Testimonial quote={quote} />
         <Resources resources={resources} />
         <Support />
-        <Footer {...footerNavigation} />
+        <Footer
+          company={footerNavigation.company}
+          legal={footerNavigation.legal}
+        />
       </div>
     </div>
   );
