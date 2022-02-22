@@ -5,7 +5,7 @@ import { openGraph } from '../lib/helper';
 
 const defaultMeta = {
   title: 'DUOS - Data Use Oversight System',
-  siteName: 'DUOS - Data Use Oversight System',
+  siteName: 'Data Use Oversight System - DUOS',
   description:
     'DUOS is a semi-automated data access management service which expedites use of human genomics data to accelerate research.',
   url: 'https://duos.org',
