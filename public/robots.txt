@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://landing.duos.org
+
+# Sitemaps
+Sitemap: https://landing.duos.org/sitemap.xml
