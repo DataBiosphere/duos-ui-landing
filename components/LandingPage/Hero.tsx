@@ -87,7 +87,6 @@ export const Hero: React.FC<Hero> = ({ hero }) => {
                 <img
                   className='w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none'
                   src='./images/illustration.svg'
-                  alt=''
                 />
               </div>
             </div>
