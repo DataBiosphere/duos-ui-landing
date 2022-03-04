@@ -19,9 +19,9 @@ RUN mkdir -p /app
 WORKDIR /app
 
 COPY package*.json /app
-RUN yarn install
 COPY . /app
+RUN yarn install
 RUN yarn build
 
 EXPOSE 3000
-CMD ["yarn", "run", "start"]
+CMD ["yarn", "start"]
