@@ -50,7 +50,7 @@ export const resources = [
     author: {
       name: 'Pamela Bretscher',
       imageUrl:
-        './images/jonathan.jpg',
+        './images/pamela.png',
       href: '#',
     },
     readingLength: '4 min',
