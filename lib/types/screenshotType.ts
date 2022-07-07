@@ -3,8 +3,8 @@ export default interface Screenshot {
 }
 
 export type ScreenshotType = {
-  category: string;
-  title: string;
-  description: string;
-  image: string;
+  Category: string;
+  Title: string;
+  Description: string;
+  Image: string;
 };

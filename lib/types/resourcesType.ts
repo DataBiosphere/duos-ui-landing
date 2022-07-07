@@ -4,17 +4,14 @@ export default interface Resources {
 
 export type Resource = {
   id: number;
-  title: string;
-  href: string;
-  date: string;
-  datetime: string;
-  category: { name: string; href: string };
-  imageUrl: string;
-  preview: string;
-  author: {
-    name: string;
-    imageUrl: string;
-    href: string;
-  };
-  readingLength: string;
+  Title: string;
+  TitleLink: string;
+  Date: string;
+  Tags: string[];
+  HeaderImage: string;
+  Summary: string;
+  AuthorName: string;
+  AuthorLink: string;
+  AuthorImage: string;
+  ReadingLength: string;
 };

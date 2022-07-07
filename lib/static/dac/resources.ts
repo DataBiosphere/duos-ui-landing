@@ -1,3 +1,5 @@
+// Deprecated in favor of api call
+
 export const resources = [
   {
     id: 1,
@@ -20,6 +22,25 @@ export const resources = [
   },
   {
     id: 2,
+    title: "The NIH DACs's DUOS pilot",
+    href: 'https://datascience.nih.gov/data-infrastructure/duos',
+    date: 'Feb 22, 2022',
+    datetime: '2022-02-22',
+    category: { name: 'Case Study', href: '#' },
+    imageUrl:
+      'https://images.unsplash.com/photo-1624957485560-47747511b32f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    preview:
+      'The National Institutes of Health (NIH) Data Access Committees (DACs) play an important role. Growing demand for controlled-access datasets has spurred the development of new semi-automated systems. NIH DACs will retain oversight while enabling efficient reviews and approvals of data requests.',
+    author: {
+      name: 'Jonathan Lawson',
+      imageUrl:
+        './images/jonathan.jpg',
+      href: '#',
+    },
+    readingLength: '6 min',
+  },
+  {
+    id: 3,
     title: "Broad Institute's DUOS pilot ",
     href: 'https://www.cell.com/cell-genomics/fulltext/S2666-979X(21)00038-0',
     date: 'Nov 10, 2021',
@@ -38,7 +59,7 @@ export const resources = [
     readingLength: '17 min',
   },
   {
-    id: 3,
+    id: 4,
     title: 'DUOS overview',
     href: 'https://www.youtube.com/watch?v=4SXzLFveshc',
     date: 'Jul 8, 2021',

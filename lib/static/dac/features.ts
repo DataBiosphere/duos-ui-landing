@@ -1,5 +1,5 @@
 import * as Icon from '@heroicons/react/outline';
-
+// Deprecated in favor of api call
 export const features = [
   {
     name: 'Dataset Registration',

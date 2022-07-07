@@ -1,3 +1,5 @@
+// Deprecated in favor of api call
+
 export const hero = {
   title: 'Share your dataset',
   titleContast: 'Fast and efficiently',

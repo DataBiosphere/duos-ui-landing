@@ -40,12 +40,3 @@ const Button = ({
 };
 
 export default Button;
-
-/*
-                            <button
-                              type='submit'
-                              className='block w-full rounded-md bg-gradient-to-r from-meadow-400 to-topaz-400 py-3 px-4 font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900'
-                            >
-                              {hero.button.text}
-                            </button>
-*/

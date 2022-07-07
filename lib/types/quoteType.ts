@@ -3,8 +3,8 @@ export default interface Quote {
 }
 
 export type QuoteType = {
-  text: string;
-  author: string;
-  company: string;
-  image: string;
+  Text: string;
+  Author: string;
+  Company: string;
+  Image: string;
 };

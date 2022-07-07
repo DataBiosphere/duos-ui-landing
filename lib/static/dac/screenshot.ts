@@ -1,3 +1,5 @@
+// Deprecated in favor of api call
+
 export const screenshot = {
   category: 'Dataset Sharing',
   title: 'Publish your data and get a shareable dataset ID faster than ever!',

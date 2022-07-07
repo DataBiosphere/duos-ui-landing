@@ -41,13 +41,13 @@ export const Hero: React.FC<Hero> = ({ hero }) => {
             <div className='mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left'>
               <div className='lg:py-24'>
                 <h1 className='mt-4 text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl'>
-                  <span className='block'>{hero.title}</span>
+                  <span className='block'>{hero.Title}</span>
                   <span className='block bg-gradient-to-r from-meadow-300 to-topaz-200 bg-clip-text pb-3 text-transparent sm:pb-5'>
-                    {hero.titleContast}
+                    {hero.Subtitle}
                   </span>
                 </h1>
                 <p className='text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl'>
-                  {hero.description}
+                  {hero.Description}
                 </p>
                 <div className='mt-10 sm:mt-12'>
                   {!isSubmitted ? (
@@ -69,15 +69,15 @@ export const Hero: React.FC<Hero> = ({ hero }) => {
                         />
                         <div className='mt-3 sm:mt-0 sm:ml-3'>
                           <Button formType='submit' buttonType='primary'>
-                            {hero.button.text}
+                            {hero.ButtonText}
                           </Button>
                         </div>
                       </div>
                     </form>
                   ) : isSuccess ? (
-                    <SubmitSuccess text={hero.submissionSuccessText} />
+                    <SubmitSuccess text={hero.SubmissionSuccessText} />
                   ) : (
-                    <SubmitFailure text={hero.submissionFailText} />
+                    <SubmitFailure text={hero.SubmissionFailText} />
                   )}
                 </div>
               </div>

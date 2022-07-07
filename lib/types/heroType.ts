@@ -3,15 +3,11 @@ export default interface Hero {
 }
 
 export type HeroType = {
-  title: string;
-  titleContast: string;
-  description: string;
-  input: {
-    placeholder: string;
-  };
-  button: {
-    text: string;
-  };
-  submissionSuccessText?: string;
-  submissionFailText?: string;
+  Title: string;
+  Subtitle: string;
+  Description: string;
+  InputPlaceholder: string;
+  ButtonText: string;
+  SubmissionSuccessText?: string;
+  SubmissionFailText?: string;
 };

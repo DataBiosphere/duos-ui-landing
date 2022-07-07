@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-
 import { openGraph } from '../lib/helper';
 
 const defaultMeta = {
@@ -11,7 +10,7 @@ const defaultMeta = {
   url: 'https://duos.org',
   type: 'website',
   robots: 'follow, index',
-  image: '',
+  image: './images/logo/DUOS-Logo-Color@2x.png',
 };
 
 type SeoProps = {

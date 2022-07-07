@@ -1,9 +1,9 @@
-export interface FeatureContent {
-  featureContent: FeatureContentType;
+export interface FeatureHeader {
+  featureHeader: FeatureHeaderType;
 }
 
-export type FeatureContentType = {
-  category: string;
-  title: string;
-  description: string;
+export type FeatureHeaderType = {
+  Category: string;
+  Title: string;
+  Description: string;
 };
