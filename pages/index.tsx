@@ -50,7 +50,7 @@ export const getServerSideProps = async () => {
     method: 'GET',
   });
 
-  const fetchFeatures = await fetch(`${process.env.API_URL}/items/Features?fields=Name,Description,Icon`, {
+  const fetchFeatures = await fetch(`${process.env.API_URL}/items/Features?fields=id,Name,Description,Icon`, {
     headers: requestHeaders,
     method: 'GET',
   });
@@ -70,7 +70,7 @@ export const getServerSideProps = async () => {
     method: 'GET',
   });
 
-  const fetchResources = await fetch(`${process.env.API_URL}/items/Resources?fields=Title,TitleLink,Date,HeaderImage.data.full_url,Summary,AuthorName,AuthorLink,AuthorImage.data.full_url,Tags,ReadingLength`, {
+  const fetchResources = await fetch(`${process.env.API_URL}/items/Resources?fields=id,Title,TitleLink,Date,HeaderImage.data.full_url,Summary,AuthorName,AuthorLink,AuthorImage.data.full_url,Tags,ReadingLength`, {
     headers: requestHeaders,
     method: 'GET',
   });

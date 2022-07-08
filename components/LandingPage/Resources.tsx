@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import React from 'react';
 import Resources from '../../lib/types/resourcesType';
 
@@ -30,8 +31,8 @@ export const Resources: React.FC<Resources> = ({ resources }) => {
                 <div className='flex flex-1 flex-col justify-between bg-white p-6'>
                   <div className='flex-1'>
                     <p className='text-sm font-medium text-meadow'>
-                      {post.Tags.map((tag) => (
-                        <a href='#' className='hover:underline'>
+                      {post.Tags.map((tag, i) => (
+                        <a key={i} href='#' className='hover:underline'>
                           {tag}
                         </a>)
                       )}
@@ -62,7 +63,7 @@ export const Resources: React.FC<Resources> = ({ resources }) => {
                         </a>
                       </p>
                       <div className='flex space-x-1 text-sm text-gray-500'>
-                        <time dateTime={post.Date}>{post.Date}</time>
+                        <time dateTime={post.Date}>{dayjs(post.Date).format('MMM DD, YYYY')}</time>
                         <span aria-hidden='true'>&middot;</span>
                         <span>{post.ReadingLength} read</span>
                       </div>
