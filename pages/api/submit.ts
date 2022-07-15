@@ -20,7 +20,7 @@ export default async function handler(
 
   try {
     await axios.post(url, JSON.stringify({
-      email,
+      email: email.toLowerCase(),
     }));
   } catch (error) {
     return res.status(500).json({ success: false });
