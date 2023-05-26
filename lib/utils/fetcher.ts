@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { Method } from '../enum/MethodEnum';
 
 const updateOptions = () => {
   if (typeof window === 'undefined') return {};
@@ -19,12 +18,12 @@ const updateOptions = () => {
   }
 };
 
-export default async function (url: string, method: Method, data?: string) {
-  if (method === Method.GET) {
+export default async function (url: string, method: string, data?: any) {
+  if (method === "GET") {
     return await axios.get(url);
   }
 
-  if (method === Method.POST) {
+  if (method === "POST") {
     return await axios.post(url, data);
   }
 }

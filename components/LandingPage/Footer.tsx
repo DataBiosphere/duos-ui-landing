@@ -1,7 +1,21 @@
 import React from 'react';
-import Footers from '../../lib/types/footerType';
 
-export const Footer: React.FC<Footers> = ({ company, legal }) => {
+type FooterProps = {
+  company: Company[];
+  legal: Legal[];
+}
+
+export type Company = {
+  name: string;
+  href: string;
+};
+
+export type Legal = {
+  name: string;
+  href: string;
+};
+
+export const Footer: React.FC<FooterProps> = ({ company, legal }) => {
   const currentYear = new Date().getFullYear();
   return (
     <>

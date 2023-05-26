@@ -1,28 +1,28 @@
 import * as Icon from '@heroicons/react/outline';
-// Deprecated in favor of api call
+
 export const features = [
   {
-    name: 'Dataset Registration',
-    description: 'Register and edit datasets in a single place',
-    icon: Icon['DocumentAddIcon'],
+    Name: 'Dataset Registration',
+    Description: 'Register and edit datasets in a single place',
+    Icon: Icon['DocumentAddIcon'],
   },
   {
-    name: 'Expedited Signing Official approvals',
-    description:
+    Name: 'Expedited Signing Official approvals',
+    Description:
       'Featuring a facilitated single pre-authorization so you can publish datasets faster.',
-    icon: Icon['AcademicCapIcon'],
+    Icon: Icon['AcademicCapIcon'],
   },
   {
-    name: 'Dataset Statistics',
-    description:
+    Name: 'Dataset Statistics',
+    Description:
       'Learn and showcase how other researchers are using your datasets!',
-    icon: Icon['ChartBarIcon'],
+    Icon: Icon['ChartBarIcon'],
   },
 ];
 
 export const featureContent = {
-  category: 'Unique Features',
-  title: 'Empower your Datasets',
-  description:
+  Category: 'Unique Features',
+  Title: 'Empower your Datasets',
+  Description:
     'Go beyond the traditional publishing process by using DUOS to empower your datasets',
 };

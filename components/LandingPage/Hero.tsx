@@ -1,12 +1,30 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
-import Hero from '../../lib/types/heroType';
+import { useState } from 'react';
 import Button from '../common/Button';
 import Input from '../common/Input';
 import SubmitFailure from '../SubmitStatus/SubmitFailure';
 import SubmitSuccess from '../SubmitStatus/SubmitSuccess';
 
-export const Hero: React.FC<Hero> = ({ hero }) => {
+export type HeroProps = {
+  Title: string;
+  Subtitle: string;
+  Description: string;
+  InputPlaceholder: string;
+  ButtonText: string;
+  SubmissionSuccessText?: string;
+  SubmissionFailText?: string;
+};
+
+
+export const Hero: React.FC<HeroProps> = ({
+  Title,
+  Subtitle,
+  Description,
+  InputPlaceholder,
+  ButtonText,
+  SubmissionSuccessText,
+  SubmissionFailText,
+}) => {
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -41,13 +59,13 @@ export const Hero: React.FC<Hero> = ({ hero }) => {
             <div className='mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left'>
               <div className='lg:py-24'>
                 <h1 className='mt-4 text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl'>
-                  <span className='block'>{hero.Title}</span>
+                  <span className='block'>{Title}</span>
                   <span className='block bg-gradient-to-r from-meadow-300 to-topaz-200 bg-clip-text pb-3 text-transparent sm:pb-5'>
-                    {hero.Subtitle}
+                    {Subtitle}
                   </span>
                 </h1>
                 <p className='text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl'>
-                  {hero.Description}
+                  {Description}
                 </p>
                 <div className='mt-10 sm:mt-12'>
                   {!isSubmitted ? (
@@ -69,15 +87,15 @@ export const Hero: React.FC<Hero> = ({ hero }) => {
                         />
                         <div className='mt-3 sm:mt-0 sm:ml-3'>
                           <Button formType='submit' buttonType='primary'>
-                            {hero.ButtonText}
+                            {ButtonText}
                           </Button>
                         </div>
                       </div>
                     </form>
                   ) : isSuccess ? (
-                    <SubmitSuccess text={hero.SubmissionSuccessText} />
+                    <SubmitSuccess text={SubmissionSuccessText} />
                   ) : (
-                    <SubmitFailure text={hero.SubmissionFailText} />
+                    <SubmitFailure text={SubmissionFailText} />
                   )}
                 </div>
               </div>

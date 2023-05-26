@@ -1,8 +1,30 @@
 import dayjs from 'dayjs';
 import React from 'react';
-import Resources from '../../lib/types/resourcesType';
 
-export const Resources: React.FC<Resources> = ({ resources }) => {
+export type AuthorProps = {
+  Name: string;
+  Href: string;
+  Avatar: string;
+};
+
+export type ResourceProps = {
+  Id: number;
+  Title: string;
+  Href: string;
+  Date: string;
+  Datetime: string;
+  Category: { name: string; href: string };
+  HeaderImage: string;
+  Summary: string;
+  Author: AuthorProps;
+  ReadingLength: string;
+};
+
+export type ResourcesProps = {
+  resources: ResourceProps[];
+};
+
+export const Resources: React.FC<ResourcesProps> = ({ resources }) => {
   return (
     <>
       <div className='relative bg-gray-50 py-16 sm:py-24 lg:py-32'>
@@ -16,28 +38,21 @@ export const Resources: React.FC<Resources> = ({ resources }) => {
             </p>
           </div>
           <div className='mx-auto mt-12 grid max-w-md gap-8 px-4 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:px-8'>
-            {resources.map((post) => (
+            {resources.map((post, i) => (
               <div
-                key={post.id}
+                key={i}
                 className='flex flex-col overflow-hidden rounded-lg shadow-lg'
               >
                 <div className='flex-shrink-0'>
                   <img
                     className='h-48 w-full object-cover'
-                    src={`${process.env.API_URL}/assets/${post.HeaderImage}`}
+                    src={post.HeaderImage}
                     alt=''
                   />
                 </div>
                 <div className='flex flex-1 flex-col justify-between bg-white p-6'>
                   <div className='flex-1'>
-                    <p className='text-sm font-medium text-meadow'>
-                      {post.Tags.map((tag, i) => (
-                        <a key={i} href='#' className='hover:underline'>
-                          {tag}
-                        </a>)
-                      )}
-                    </p>
-                    <a href={post.TitleLink} className='mt-2 block'>
+                    <a href={post.Href} className='mt-2 block'>
                       <p className='text-xl font-semibold text-gray-900'>
                         {post.Title}
                       </p>
@@ -48,18 +63,18 @@ export const Resources: React.FC<Resources> = ({ resources }) => {
                   </div>
                   <div className='mt-6 flex items-center'>
                     <div className='flex-shrink-0'>
-                      <a href={post.AuthorLink}>
+                      <a href={post.Author.Href}>
                         <img
                           className='h-10 w-10 rounded-full'
-                          src={`${process.env.API_URL}/assets/${post.AuthorImage}`}
-                          alt={post.AuthorName}
+                          src={post.Author.Avatar}
+                          alt={post.Author.Name}
                         />
                       </a>
                     </div>
                     <div className='ml-3'>
                       <p className='text-sm font-medium text-gray-900'>
-                        <a href={post.AuthorLink} className='hover:underline'>
-                          {post.AuthorName}
+                        <a href={post.Author.Name} className='hover:underline'>
+                          {post.Author.Name}
                         </a>
                       </p>
                       <div className='flex space-x-1 text-sm text-gray-500'>

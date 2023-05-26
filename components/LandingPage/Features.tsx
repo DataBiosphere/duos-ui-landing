@@ -1,9 +1,21 @@
-import Features from '../../lib/types/featureType';
-import { FeatureHeader } from '../../lib/types/featureContentType';
-import { getIcon } from 'lib/getIcon';
+type FeaturesProps = {
+  feature: FeatureProp[];
+  featureHeader: HeaderProp;
+}
 
+type FeatureProp = {
+  Name: string;
+  Description: string;
+  Icon: React.ComponentType;  
+};
 
-export const Features: React.FC<Features & FeatureHeader> = ({
+type HeaderProp = {
+  Category: string;
+  Title: string;
+  Description: string;
+};
+
+export const Features: React.FC<FeaturesProps> = ({
   feature,
   featureHeader: featureContent,
 }) => {
@@ -23,7 +35,6 @@ export const Features: React.FC<Features & FeatureHeader> = ({
           <div className='mt-12'>
             <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
               {feature.map((feature) => {
-                const IconComponent = getIcon(feature.Icon);
                 return (
                   <div key={feature.Name} className='pt-6'>
                     <div className='flow-root rounded-lg bg-gray-50 px-6 pb-8'>
@@ -34,7 +45,7 @@ export const Features: React.FC<Features & FeatureHeader> = ({
                               className='h-6 w-6 text-white'
                               aria-hidden='true'
                             >
-                              <IconComponent />
+                              <feature.Icon />
                             </div>
                           </span>
                         </div>
